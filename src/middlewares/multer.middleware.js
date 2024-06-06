@@ -1,4 +1,3 @@
-// read the documentation https://github.com/expressjs/multer
 import multer from "multer";
 
 const storage = multer.diskStorage({
