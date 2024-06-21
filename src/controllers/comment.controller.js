@@ -4,6 +4,7 @@ import { Comment } from "../models/comment.model";
 import { ApiError } from "../utils/ApiError";
 import { ApiResponse } from "../utils/ApiResponse";
 import { asyncHandler } from "../utils/asyncHandler";
+import mongoose from "mongoose"
 
 const getVideoComments=asyncHandler(async(req,res)=>{
     //get video id from thew user which he clicked
@@ -21,7 +22,7 @@ const getVideoComments=asyncHandler(async(req,res)=>{
     const videoComment= await Comment.aggregate([
         {
             $match:{
-                video:Video.findById(videoId)
+                video:new mongoose.Types.ObjectId(videoId)
             }
         },
         {
