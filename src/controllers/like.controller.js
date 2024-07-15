@@ -42,6 +42,7 @@ const toggleCommentLike=asyncHandler(async(req,res)=>{
         comment:commentId,
         likedBy:req.user?._id
     })
+    console.log(youLiked);
     if(youLiked){
         await Like.findByIdAndDelete(youLiked._id);
         return res
