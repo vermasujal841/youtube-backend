@@ -36,7 +36,7 @@ const app = express()
         app.on("errror", (error) => {
             console.log("ERRR: ", error);
             throw error
-        })
+        })// sometimes the express app is not able to talk to the the database we use on in the next line of the await callback
 
         app.listen(process.env.PORT, () => {
             console.log(`App is listening on port ${process.env.PORT}`);
