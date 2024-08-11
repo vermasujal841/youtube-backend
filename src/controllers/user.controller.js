@@ -126,7 +126,8 @@ const registerUser = asyncHandler( async (req, res) => {
     
        const {accessToken, refreshToken} = await generateAccessAndRefereshTokens(user._id)
     
-        const loggedInUser = await User.findById(user._id).select("-password -refreshToken")
+        const loggedInUser = await User.findById(user._id).select("-password -refreshToken") // this user is added with refresh token above user did not have that.(kaafi cheeze empty thi uppar wale mai
+        
     
         const options = {
             httpOnly: true,

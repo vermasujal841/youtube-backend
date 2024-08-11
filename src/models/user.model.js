@@ -63,7 +63,7 @@ userSchema.methods.isPasswordCorrect = async function(password){
     return await bcrypt.compare(password, this.password)
 }
 
-userSchema.methods.generateAccessToken = function(){
+userSchema.methods.generateAccessToken = function(){ //https://medium.com/@armaancodes/schema-methods-in-mongodb-mongoose-efd6e6bb9cc8
     return jwt.sign(
         {
             _id: this._id,
