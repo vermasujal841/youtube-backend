@@ -1,7 +1,7 @@
 # Backend Project
 ### Database Model Schema :-
 
-* [Model Link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)
+* [Model Link](https://app.eraser.io/workspace/ublrpP5lXN1HefJ4KIbL?origin=share)
 
 ## OverView
 This project is a backend application for a social media platform that combines features of YouTube and Twitter. It provides functionalities for users to upload, view, and interact with videos, as well as post and engage with tweets. <br>
